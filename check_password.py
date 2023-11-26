@@ -9,12 +9,6 @@ with open("senha_criptografada.txt", "r") as criptografia_txt:
 # obtem o hash em hexadecimal da senha
 hash_senha = sha256(senha.encode()).hexdigest()
 
-# compara o hash da senha com o hash informado pelo arquivo "senha_criptografada.txt"
-if hash_senha == senha_C:
-    print(f"'{senha}' é uma senha válida.")
-else:
-    print(f"'{senha}' não é a senha correta!")
-
 # tratamento para pytest
 '''def resultado():
     asset hash_senha == senha_C'''
